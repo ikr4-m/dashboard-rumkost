@@ -1,0 +1,61 @@
+@import './_constant.scss';
+// Konten dan boxnya
+.content {
+    // margin-top: 1rem;
+    color: $font_color;
+
+    .box {
+        padding: 1rem 1rem;
+        background-color: white;
+        box-shadow: 0px 0px 15px -10px;
+        border-radius: 10px;
+    }
+}
+
+// Heading
+$title_margin: 1.2rem;
+.title {
+    margin-top: $title_margin;
+    margin-bottom: $title_margin;
+    font-weight: 400;
+    font-size: 1.225em;
+}
+
+// Divider kalau butuh pemisah
+.divider {
+    $divider_border: 0.5px solid rgba(0, 0, 0, .20);
+    .start {
+        border-right: $divider_border;
+    }
+    .middle {
+        border-right: $divider_border;
+        border-left: $divider_border;
+    }
+    .end {
+        border-left: $divider_border;
+    }
+}
+
+// Submenu
+.submenu {
+    .item {
+        display: flex;
+        text-decoration: none;
+        color: $font_color !important;
+        padding: 0.7rem 0.5rem;
+
+        .icon {
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+            padding-right: 0.5rem;
+        }
+    }
+    .item:hover {
+        background-color: $navbar_color;
+        color: #fff !important;
+        border-radius: 7px;
+    }
+    .item.active {
+        @extend .item, :hover
+    }
+}

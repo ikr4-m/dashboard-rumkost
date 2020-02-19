@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | SI Rumah Kost</title>
+
+    <!-- jQuery -->
+    <script src="./dist/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/bootstrap-icons/css/bootstrap-icons.min.css">
+    <!-- jQuery Datatable -->
+    <script src="./dist/jquery-dataTables/js/jquery.dataTables.id-id.js"></script>
+    <script src="./dist/jquery-dataTables/js/bs4.min.js"></script>
+    <link rel="stylesheet" href="./dist/jquery-dataTables/css/bs4.min.css">
+
+    <script src="./dist/main.min.js"></script>
+    <link rel="stylesheet" href="./dist/main.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-dashboard">
+
+        <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-home mr-2 my-auto"></span> Rumah Kost Mutiara Ilmu
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navDashboard"
+            aria-controls="navDashboard" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navDashboard">
+
+            <ul class="navbar-nav mx-auto navbar-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Beranda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Input Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Token Listrik</a>
+                        <a class="dropdown-item" href="#">Fasilitas Kamar</a>
+                        <a class="dropdown-item" href="#">Kamar</a>
+                        <a class="dropdown-item" href="#">Penyewa Kamar</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Transaksi
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Token Listrik</a>
+                        <a class="dropdown-item" href="#">Tagihan Kamar</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Laporan</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav justify-content-end navbar-left">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="img/nopic.png" alt="nopic" srcset="">
+                        Halo, Admin!
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kelola Akun</a>
+                        <a class="dropdown-item" href="#">Keluar</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- Fully Home Jumbotron -->
+    <div class="container-fluid jmbtrn d-flex flex-column px-0">
+        <div class="content m-auto text-white">
+            <p class="header">Selamat Datang, Iyyo!</p>
+            <p class="subtitle">Semoga harimu menyenangkan!</p>
+        </div>
+        <div class="image-bg mx-auto d-flex">
+            <img src="./img/home_dashboard.png" alt="home_dashboard" class="mt-auto mx-auto">
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container content">
+
+        <!-- Simple Box -->
+        <p class="title">Contoh Tabel</p>
+        <div class="box">
+            <script>
+                $(function () {
+                    $('.table').DataTable({
+                        responsive: true,
+                        language: dtLangID
+                    })
+                })    
+            </script>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Pekerjaan</th>
+                    <th>Nomor Telepon</th>
+                    <th>Aksi</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ikram</td>
+                        <td>Goa Ria, Makassar</td>
+                        <td>Nolep</td>
+                        <td>085085085085</td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <div class="btn btn-warning">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </div>
+                                <div class="btn btn-danger">
+                                    <span class=" glyphicon glyphicon-trash "></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ikram</td>
+                        <td>Goa Ria, Makassar</td>
+                        <td>Nolep</td>
+                        <td>085085085085</td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <div class="btn btn-warning">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </div>
+                                <div class="btn btn-danger">
+                                    <span class=" glyphicon glyphicon-trash "></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ikram</td>
+                        <td>Goa Ria, Makassar</td>
+                        <td>Nolep</td>
+                        <td>085085085085</td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <div class="btn btn-warning">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </div>
+                                <div class="btn btn-danger">
+                                    <span class=" glyphicon glyphicon-trash "></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Simple Divider -->
+        <p class="title">Contoh Kolom</p>
+        <div class="box">
+            <div class="container-fluid">
+                <div class="row divider">
+                    <div class="col-lg-3 start text-center">A</div>
+                    <div class="col-lg-3 middle text-center">B</div>
+                    <div class="col-lg-3 middle text-center">C</div>
+                    <div class="col-lg-3 end text-center">D</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submenu -->
+        <p class="title">Contoh yang ada submenunya</p>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="box submenu">
+                    <a class="item" href="#">
+                        <span class="glyphicon glyphicon-chevron-right icon"></span> Token Listrik
+                    </a>
+                    <a class="item" href="#">
+                        <span class="glyphicon glyphicon-chevron-right icon"></span> Fasilitas Kamar
+                    </a>
+                    <a class="item" href="#">
+                        <span class="glyphicon glyphicon-chevron-right icon"></span> Kamar
+                    </a>
+                    <a class="item active" href="#">
+                        <span class="glyphicon glyphicon-chevron-right icon"></span> Penyewa Kamar
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="box">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Alamat</th>
+                            <th>Pekerjaan</th>
+                            <th>Nomor Telepon</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ikram</td>
+                                <td>Goa Ria, Makassar</td>
+                                <td>Nolep</td>
+                                <td>085085085085</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ikram</td>
+                                <td>Goa Ria, Makassar</td>
+                                <td>Nolep</td>
+                                <td>085085085085</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ikram</td>
+                                <td>Goa Ria, Makassar</td>
+                                <td>Nolep</td>
+                                <td>085085085085</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="text-center">&copy; 2019. SI-Rumah-Kost. Ikramullah.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+@import './_constant.scss';
+
+// Navbar normal
+
+.navbar-dashboard {
+    $width_kiri_kanan: 250px;
+    background-color: $navbar_color !important;
+    
+    .navbar-brand {
+        width: $width_kiri_kanan;
+    }
+
+    .collapse .navbar-left {
+        width: $width_kiri_kanan;
+        img {
+            width: 35px;
+            height: 35px;
+            margin-right: 5px;
+            border-radius: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .collapse .navbar-center{
+        .nav-item {
+            display: flex;
+            a {
+                margin: auto;
+            }
+        }
+        @mixin active_item() {
+            $active_bbot: 5px;
+            border-bottom: $active_bbot solid $bg_color;
+            padding-top: $active_bbot;
+            box-sizing: border-box;
+        }
+        .nav-item:hover {
+            @include active_item();
+        }
+        .active {
+            @include active_item();
+        }
+    }
+}
+
+// Pengecualian apabila sudah masuk mode tablet
+@media (min-width: 992px) {
+    .navbar-dashboard {
+        height: $height_navbar;
+        .collapse .navbar-center .nav-item {
+            height: $height_navbar;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-dashboard {
+        .collapse .navbar-left {
+            width: 100%;
+
+            li a {
+                text-align: center!important;
+            }
+        }
+    }
+}
